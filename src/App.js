@@ -14,7 +14,16 @@ function App() {
   return (
     <div className='App'>
       <div className='top'>
-        <MovieForm />
+        <MovieForm
+          movieFormYearReleased={movieFormYearReleased}
+          movieFormDirector={movieFormDirector}
+          movieFormColor={movieFormColor}
+          movieTitle={movieTitle}
+          setMovieFormYearReleased={setMovieFormYearReleased}
+          setMovieFormDirector={setMovieFormDirector}
+          setMovieFormColor={setMovieFormColor}
+          setMovieTitle={setMovieTitle}
+        />
       </div>
       <div className='bottom'>
 
