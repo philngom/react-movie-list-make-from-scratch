@@ -1,6 +1,15 @@
 import './MovieForm.css';
 
-export default function MovieForm() {
+export default function MovieForm({
+  movieFormYearReleased,
+  movieFormDirector,
+  movieFormColor,
+  movieTitle,
+  setMovieFormYearReleased,
+  setMovieFormDirector,
+  setMovieFormColor,
+  setMovieTitle
+}) {
   return (
     <div className="movie-form">
       <form>
@@ -26,6 +35,7 @@ export default function MovieForm() {
             <option value='orange'>Orange</option>
           </select>
         </label>
+        <button type='submit'>Submit</button>
       </form>
     </div>
   );
