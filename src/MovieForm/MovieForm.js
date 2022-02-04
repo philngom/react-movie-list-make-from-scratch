@@ -16,6 +16,16 @@ export default function MovieForm() {
           Director:
           <input />
         </label>
+        <label>
+          Select color:
+          <select>
+            <option value='blue'>Blue</option>
+            <option value='red'>Red</option>
+            <option value='green'>Green</option>
+            <option value='purple'>Purple</option>
+            <option value='orange'>Orange</option>
+          </select>
+        </label>
       </form>
     </div>
   );

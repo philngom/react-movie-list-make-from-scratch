@@ -6,12 +6,14 @@
   font-size: 2rem;
   background-color: darkred;
   border-radius: 1em;
-}
-
-form label {
-  display: block;
+  margin: 0.2em;
 }
 
 label {
-  margin: 10px;
+  display: block;
+  margin: 0.5em;
+}
+
+input, select {
+  margin-left: 0.5em;
 }
