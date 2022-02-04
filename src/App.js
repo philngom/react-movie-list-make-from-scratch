@@ -6,10 +6,27 @@ function App() {
 
   const [movieFormYearReleased, setMovieFormYearReleased] = useState('');
   const [movieFormDirector, setMovieFormDirector] = useState('');
-  const [movieFormColor, setMovieFormColor] = useState('');
+  const [movieFormColor, setMovieFormColor] = useState('blue');
   const [allMovies, setAllMovies] = useState([]);
   const [filteredMovies, setFilteredMoviess] = useState([]);
   const [movieTitle, setMovieTitle] = useState('');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const newMovie = {
+      name: movieTitle,
+      year: movieFormYearReleased,
+      director: movieFormDirector,
+      color: movieFormColor
+    };
+
+    setAllMovies([...allMovies, newMovie]);
+    setMovieFormYearReleased('');
+    setMovieFormDirector('');
+    setMovieFormColor('blue');
+    setMovieTitle('');
+  }
 
   return (
     <div className='App'>
@@ -23,6 +40,7 @@ function App() {
           setMovieFormDirector={setMovieFormDirector}
           setMovieFormColor={setMovieFormColor}
           setMovieTitle={setMovieTitle}
+          handleSubmit={handleSubmit}
         />
         <div className='movie-preview' color={movieFormColor}>
           <p>{movieTitle}</p>
