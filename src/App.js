@@ -4,14 +4,15 @@ import { useState } from 'react';
 
 function App() {
 
-  const [movieFormName, setMovieFormName] = useState('');
   const [movieFormYearReleased, setMovieFormYearReleased] = useState('');
-  const [movieFormTitle, setMovieFormTitle] = useState('');
   const [movieFormDirector, setMovieFormDirector] = useState('');
   const [movieFormColor, setMovieFormColor] = useState('');
+  const [allMovies, setAllMovies] = useState([]);
+  const [filteredMovies, setFilteredMoviess] = useState([]);
+  const [movieTitle, setMovieTitle] = useState('');
 
   return (
-    <div>
+    <div className='App'>
       <div className='top'>
         <MovieForm />
       </div>
