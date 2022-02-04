@@ -24,11 +24,14 @@ function App() {
           setMovieFormColor={setMovieFormColor}
           setMovieTitle={setMovieTitle}
         />
+        <div className='movie-preview' color={movieFormColor}>
+          <p>{movieTitle}</p>
+          <p>{movieFormYearReleased}</p>
+          <p>{movieFormDirector}</p>
+        </div>
       </div>
       <div className='bottom'>
-
       </div>
-
     </div>
   );
 }
