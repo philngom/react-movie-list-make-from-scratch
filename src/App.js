@@ -9,7 +9,7 @@ function App() {
   const [movieFormDirector, setMovieFormDirector] = useState('');
   const [movieFormColor, setMovieFormColor] = useState('blue');
   const [allMovies, setAllMovies] = useState([]);
-  const [filteredMovies, setFilteredMoviess] = useState([]);
+  const [filteredMovies, setFilteredMovies] = useState([]);
   const [movieTitle, setMovieTitle] = useState('');
 
   function handleSubmit(e) {
@@ -38,6 +38,12 @@ function App() {
     setAllMovies([...allMovies]);
   }
 
+  function handleFilterMovies(query) {
+    const filter = allMovies.filter(movie => movie.name.includes(query));
+
+    setFilteredMovies(filter);
+  }
+
   return (
     <div className='App'>
       <div className='top'>
@@ -58,7 +64,11 @@ function App() {
         </div>
       </div>
       <div className='bottom'>
-        <MovieList movies={allMovies} handleDelete={handleDelete}/>
+        <label>
+          Search Movies:
+          <input onChange={(e) => handleFilterMovies(e.target.value)}/>
+        </label>
+        <MovieList movies={filteredMovies.length ? filteredMovies : allMovies} handleDelete={handleDelete}/>
       </div>
     </div>
   );
