@@ -15,19 +15,19 @@ export default function MovieForm({
       <form>
         <label>
           Movie title:
-          <input />
+          <input onChange={(e) => setMovieTitle(e.target.value)}/>
         </label>
         <label>
           Year released:
-          <input />
+          <input onChange={(e) => setMovieFormYearReleased(e.target.value)}/>
         </label>
         <label>
           Director:
-          <input />
+          <input onChange={(e) => setMovieFormDirector(e.target.value)}/>
         </label>
         <label>
           Select color:
-          <select>
+          <select onChange={(e) => setMovieFormColor(e.target.value)}>
             <option value='blue'>Blue</option>
             <option value='red'>Red</option>
             <option value='green'>Green</option>

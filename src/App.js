@@ -42,7 +42,7 @@ function App() {
           setMovieTitle={setMovieTitle}
           handleSubmit={handleSubmit}
         />
-        <div className='movie-preview' color={movieFormColor}>
+        <div className='movie-preview' style={{ backgroundColor: movieFormColor }}>
           <p>{movieTitle}</p>
           <p>{movieFormYearReleased}</p>
           <p>{movieFormDirector}</p>
