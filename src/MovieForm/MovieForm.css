@@ -1,0 +1,19 @@
+.movie-form {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: darkred;
+  border-radius: 1em;
+  margin: 0.2em;
+}
+
+label {
+  display: block;
+  margin: 0.5em;
+}
+
+input, select {
+  margin-left: 0.5em;
+}
