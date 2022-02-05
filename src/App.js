@@ -30,6 +30,14 @@ function App() {
     setMovieTitle('');
   }
 
+  function handleDelete(id) {
+    const index = allMovies.findIndex(movie => movie.id === id);
+
+    allMovies.splice(index, 1);
+
+    setAllMovies([...allMovies]);
+  }
+
   return (
     <div className='App'>
       <div className='top'>
@@ -50,7 +58,7 @@ function App() {
         </div>
       </div>
       <div className='bottom'>
-        <MovieList movies={allMovies}/>
+        <MovieList movies={allMovies} handleDelete={handleDelete}/>
       </div>
     </div>
   );
