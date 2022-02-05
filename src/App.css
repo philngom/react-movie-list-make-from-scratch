@@ -5,6 +5,13 @@
   height: 100vh;
 }
 
+.movie-preview {
+  width: 50%;
+  height: 50%;
+  border-radius: 1em;
+  margin: auto auto;
+}
+
 .top {
   display: grid;
   grid-template-columns: 1fr 1fr;
