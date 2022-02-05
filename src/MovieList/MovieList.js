@@ -1,6 +1,6 @@
 import './MovieList.css';
 
-export default function MovieList() {
+export default function MovieList({ movies }) {
   return (
     <div>
 

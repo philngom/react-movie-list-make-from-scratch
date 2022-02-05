@@ -16,6 +16,7 @@ function App() {
     e.preventDefault();
 
     const newMovie = {
+      id: `${movieTitle}${movieFormYearReleased}${movieFormDirector}`,
       name: movieTitle,
       year: movieFormYearReleased,
       director: movieFormDirector,
