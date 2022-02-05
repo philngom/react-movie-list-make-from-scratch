@@ -1,5 +1,6 @@
 import './App.css';
 import MovieForm from './MovieForm/MovieForm';
+import MovieList from './MovieList/MovieList';
 import { useState } from 'react';
 
 function App() {
@@ -32,10 +33,6 @@ function App() {
     <div className='App'>
       <div className='top'>
         <MovieForm
-          movieFormYearReleased={movieFormYearReleased}
-          movieFormDirector={movieFormDirector}
-          movieFormColor={movieFormColor}
-          movieTitle={movieTitle}
           setMovieFormYearReleased={setMovieFormYearReleased}
           setMovieFormDirector={setMovieFormDirector}
           setMovieFormColor={setMovieFormColor}
@@ -49,6 +46,7 @@ function App() {
         </div>
       </div>
       <div className='bottom'>
+        <MovieList />
       </div>
     </div>
   );
