@@ -5,22 +5,25 @@ export default function MovieForm({
   setMovieFormDirector,
   setMovieFormColor,
   setMovieTitle,
-  handleSubmit
+  handleSubmit,
+  movieTitle,
+  movieFormDirector,
+  movieFormYearReleased
 }) {
   return (
     <div className="movie-form">
       <form onSubmit={ handleSubmit }>
         <label>
           Movie title:
-          <input required onChange={(e) => setMovieTitle(e.target.value)}/>
+          <input required value={movieTitle} onChange={(e) => setMovieTitle(e.target.value)}/>
         </label>
         <label>
           Year released:
-          <input required onChange={(e) => setMovieFormYearReleased(e.target.value)}/>
+          <input required value={movieFormYearReleased} onChange={(e) => setMovieFormYearReleased(e.target.value)}/>
         </label>
         <label>
           Director:
-          <input required onChange={(e) => setMovieFormDirector(e.target.value)}/>
+          <input required value={movieFormDirector} onChange={(e) => setMovieFormDirector(e.target.value)}/>
         </label>
         <label>
           Select color:
